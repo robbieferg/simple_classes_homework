@@ -1,8 +1,10 @@
 public class Printer {
     private int remainingSheets;
+    private int tonerVolume;
 
-    public Printer(int remainingSheets) {
+    public Printer(int remainingSheets, int tonerVolume) {
         this.remainingSheets = remainingSheets;
+        this.tonerVolume = tonerVolume;
     }
 
     public int getRemainingSheets() {
@@ -15,5 +17,9 @@ public class Printer {
         if (totalPages <= this.remainingSheets) {
             this.remainingSheets -= totalPages;
         }
+    }
+
+    public int getTonerVolume() {
+        return this.tonerVolume;
     }
 }
