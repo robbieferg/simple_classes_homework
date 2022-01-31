@@ -16,6 +16,7 @@ public class Printer {
         int totalPages = calculator.multiply(numberOfPages, numberOfCopies);
         if (totalPages <= this.remainingSheets) {
             this.remainingSheets -= totalPages;
+            this.tonerVolume -= totalPages;
         }
     }
 
