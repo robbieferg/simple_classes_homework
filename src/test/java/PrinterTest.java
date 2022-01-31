@@ -16,4 +16,16 @@ public class PrinterTest {
         assertEquals(100, printer.getRemainingSheets());
     }
 
+    @Test
+    public void printDoesNotRunIfNotEnoughPaper() {
+        printer.print(20, 6);
+        assertEquals(100, printer.getRemainingSheets());
+    }
+
+    @Test
+    public void printDoesRunIfEnoughPaper() {
+        printer.print(5, 4);
+        assertEquals(80, printer.getRemainingSheets());
+    }
+
 }
